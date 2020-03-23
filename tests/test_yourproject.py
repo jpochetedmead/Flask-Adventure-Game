@@ -1,5 +1,4 @@
-import yourproject
+import escape_game
 
 def test_import():
-    assert yourproject
-
+    assert escape_game

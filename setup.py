@@ -5,12 +5,12 @@ with open("README.md", "r") as f:
 
 
 setuptools.setup(
-    name="yourproject"
+    name="escape_game"
     version="0.0.1",
     author="your name",
     author_email="your@email.com",
-    url="https://github.com/yourusername/yourproject",
-    description="what does yourproject do?",
+    url="https://github.com/yourusername/escape_game",
+    description="what does escape_game do?",
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
