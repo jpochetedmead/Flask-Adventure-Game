@@ -1,1 +1,1 @@
-web: gunicorn "flaskherokudemo:create_app()"
+web: gunicorn "escape_game:create_app()"

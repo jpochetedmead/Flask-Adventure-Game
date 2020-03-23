@@ -1,5 +1,5 @@
 import pytest
-from flaskherokudemo import create_app
+from escape_game import create_app
 
 
 @pytest.fixture
