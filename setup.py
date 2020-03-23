@@ -7,10 +7,10 @@ with open("README.md", "r") as f:
 setuptools.setup(
     name="escape_game"
     version="0.0.1",
-    author="your name",
-    author_email="your@email.com",
-    url="https://github.com/yourusername/escape_game",
-    description="what does escape_game do?",
+    author="Julio Pochet Edmead",
+    author_email="jpe3841@gmail.com",
+    url="https://github.com/jpochetedmead/escape_game",
+    description="escape_game app configured to be deployed to Heroku",
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
