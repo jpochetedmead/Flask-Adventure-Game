@@ -7,3 +7,7 @@ def test_config():
 def test_index(client):
     response = client.get('/')
     assert response.data == b'Flask Heroku Demo'
+
+def test_hello(client):
+    response = client.get('/hello')
+    assert response.data == b'Hello World!'
