@@ -14,8 +14,8 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
-    install_requires=[],
-    extras_require=[],
+    install_requires=["flask"],
+    extras_require={"test": ["pytest", "coverage"]},
     tests_require=['pytest'],
     python_requires='>=3.6',
 )
