@@ -22,13 +22,7 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    @app.route('/')
-    def index():
-        return 'Flask Heroku Demo'
-
-    # a simple page that says hello
-    @app.route('/hello')
-    def hello():
-        return 'Hello World!'
+    from . import engine
+    app.register_blueprint(engine.bp)
 
     return app
