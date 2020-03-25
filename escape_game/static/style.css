@@ -1,0 +1,169 @@
+/* CSS stylesheet */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'VT323', monospace;
+  background: linear-gradient(180deg, black 10%, black 90%);
+  padding: 5%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px;
+  background: linear-gradient(180deg, darkred 10%, gray 90%);
+  color: black;
+  border-radius: 1%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 20px 0 rgba(0,0,0,0.2), 0 20px 20px 0 rgba(0,0,0,0.19);
+}
+
+.footer,
+.down-span,
+.down-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer {
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  padding: 1%;
+  width: 100%;
+  background: linear-gradient(180deg, darkred 10%, gray 90%);
+  font-size: 20px;
+}
+
+.down-span {
+  justify-content: flex-start;
+  width: 100%;
+  padding: 2%;
+  margin-left: 1em;
+  margin-right: 1em;
+  color: white;
+}
+
+.down-nav {
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10%;
+}
+
+.down-nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.btn a {
+  text-decoration: none;
+}
+
+.down-nav img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid red;
+  background-color: darkgray;
+  border-radius: 50%;
+  height: 5em;
+  width: 5em;
+  margin-right: 1em;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: white;
+}
+
+.down-nav img:hover {
+  border: 5px solid red;
+  border-radius: 50%;
+  background-color: red;
+  margin-right: 1em;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: white;
+}
+
+/*** iPhone X ***/
+@media screen and (min-width: 375px) and (max-width: 812px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.down-nav .btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+}
+
+/**** SMALL ****/
+@media screen and (max-width: 1184px) {
+  .footer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer .down-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1%;
+    margin: 1%;
+  }
+
+  .down-nav .btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer marquee {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+/*** I'll edit these medias later ***/
+/**** MEDIUM ****/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/**** LARGE ****/
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+
+}
+
+/**** EXTRA LARGE ****/
+@media screen and (min-width: 1366px) {
+
+}
