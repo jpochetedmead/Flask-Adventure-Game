@@ -12,7 +12,7 @@ def test_config():
 #    response = client.get('/hello')
 #    assert response.data == b'Hello World!'
 
-#### below chekiarlo
+#
 
 def test_index(client):
     response = client.get('/')
