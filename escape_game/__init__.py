@@ -7,6 +7,7 @@ def create_app(test_config=None):
     app = Flask(__name__)
     app.config.from_mapping(
         SECRET_KEY='dev'
+        # DATABASE=os.path.join(app.instance_path, "flaskr.sqlite"),
     )
 
     if test_config is None:
@@ -22,7 +23,19 @@ def create_app(test_config=None):
     except OSError:
         pass
 
+    # a simple page that says hello
+    #@app.route('/hello')
+    #def hello_world():
+    #    return 'Hello, World!'
+
     from . import engine
     app.register_blueprint(engine.bp)
+    app.add_url_rule('/', endpoint='index')
+
+    from . import db
+    db.init_app(app)
+
+    from . import auth
+    app.register_blueprint(auth.bp) # Import and register the blueprint from the factory using app.register_blueprint()
 
     return app
