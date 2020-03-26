@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h1>{% block title %}Third Room{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <article class="post" >
+
+      <header>
+        <div>
+          <a class='action' href="/game/menu">Exit game</a>
+          <h1>Room 3</h1>
+        </div>
+      </header>
+
+      <p>This is Room 3</p>
+
+    </article>
+{% endblock %}

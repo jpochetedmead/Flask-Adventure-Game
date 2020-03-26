@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Game Menu{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <article class="post" >
+      <h2>This is the 'Escape The Curse Of Chucky' Adventure Game.</h2>
+      <hr>
+      <p>Please choose a menu option to proceed.</p>
+      <a href="{{ url_for('game.room1') }}">Start Game</a>
+      <a href="{{ url_for('game.guide') }}">How to Play</a>
+    </article>
+{% endblock %}
