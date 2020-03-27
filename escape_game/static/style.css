@@ -8,7 +8,7 @@
 html {
   font-family: 'VT323', monospace;
   background: linear-gradient(180deg, black 10%, black 90%);
-  padding: 5%;
+  padding: 3%;
 }
 
 body {
@@ -21,6 +21,65 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: 0 20px 20px 0 rgba(0,0,0,0.2), 0 20px 20px 0 rgba(0,0,0,0.19);
+  color: white;
+}
+
+.header {
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+  padding: 1%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.header nav,
+.header ul,
+.header li,
+.header a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.header ul {
+  list-style: none;
+  color: red;
+  background: transparent;
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  border: 3px solid red;
+  text-transform: uppercase;
+}
+
+.header a:hover {
+  color: white;
+  background-color: darkred;
+}
+
+.main li {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+}
+
+.main a {
+  color: white;
+  border-color: white;
+  border-width: 3px;
 }
 
 .footer,
