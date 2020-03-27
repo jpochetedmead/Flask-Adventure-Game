@@ -1,19 +1,18 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}How to play Escape The Curse Of Chucky{% endblock %}</h1>
+<h1>{% block title %}How to Play{% endblock %} - Escape The Curse Of Chucky</h1>
 {% endblock %}
 
 {% block content %}
-  <article class="post" >
-      <header>
-        <a href="/game/menu">Back to Menu</a>
-        <div>
-        </div>
-      </header>
-      <h2>Here is how to play Escape The Curse Of Chucky</h2>
-      <hr>
-      <p>Read the text and type/select your answer to the question then you will be sent down a path.</p>
-      <p>There is not "right answers" because anything could happen. Chuky is very unpredictable.</p>
-    </article>
+<hr>
+<br>
+<p>Read the text and type/select your answer to the question then you will be sent down a path.</p>
+<p>However {{ person }}, keep in mind that there is not "right answers" because anything could happen. Chuky is very unpredictable.</p>
+<br>
+<hr>
+<br>
+<p><a href="{{ url_for('engine.menu', name='name') }}"">Return to Menu</a></p>
+<br>
+<hr>
 {% endblock %}

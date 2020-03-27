@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
-
 {% block header %}
-  <h1>{% block title %}Profile{% endblock %}</h1>
+  {% if g.user %}
+  <h1>{% block title %}{{ user }}'s Profile{% endblock %}</h1>
+  {% else %}
+  <h1>Profile</h1>
+  {% endif %}
 {% endblock %}
 
 {% block content %}
+<p><a href="{{ url_for('engine.menu', name='name') }}">Return to Home Page</a></p>
+
   <form method="post">
     <label for="username">Username</label>
     <input name="username" id="username" required>
