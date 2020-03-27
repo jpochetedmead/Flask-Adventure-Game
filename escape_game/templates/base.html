@@ -20,15 +20,11 @@
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <!-- CSS stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <!-- Bootstrap -->
-    <!--
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    -->
     <title>{% block title %}{% endblock %} - Escape The Curse Of Chucky</title>
     </head>
+
+    <header class="header">
     <nav>
-      <h1>Escape The Curse Of Chucky</h1>
       <ul>
         {% if g.user %}
           <li><span>{{ g.user['username'] }}</span>
@@ -40,14 +36,23 @@
         {% endif %}
       </ul>
     </nav>
-    <section class="content">
-      <header>
-        {% block header %}{% endblock %}
-      </header>
+    {% block header %}{% endblock %}
+    </header>
 
-      {% for message in get_flashed_messages() %}
-        <div class="flash">{{ message }}</div>
-      {% endfor %}
+    <main class="main">
+    {% block content %}{% endblock %}
+    </main>
 
-      {% block content %}{% endblock %}
-    </section>
+        <!-- FOOTER -->
+    <footer class="footer">
+      <nav class="down-nav">
+        <ul>
+          <li class="btn"><a href="https://www.facebook.com/julio.pochetedmead" target="_blank"><img src="images/icons/Facebook.png" alt="Facebook"></a></li>
+          <li class="btn"><a href="https://github.com/jpochetedmead" target="_blank"><img src="images/icons/Github.png" alt="Github"></a></li>
+          <li class="btn"><a href="https://www.instagram.com/julio.pochet/" target="_blank"><img src="images/icons/Instagram.png" alt="Instagram"></a></li>
+       </ul>
+      </nav>
+      <marquee><span class="down-span">©Copyright &nbsp;<time datetime='2020-03-25 05:25-0800'>2020</time>&nbsp;by Julio Pochet Edmead. All rights reserved.</span></marquee>
+    </footer>
+</body>
+</html>
