@@ -23,11 +23,6 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    # a simple page that says hello
-    #@app.route('/hello')
-    #def hello_world():
-    #    return 'Hello, World!'
-
     from . import engine
     app.register_blueprint(engine.bp)
     app.add_url_rule('/', endpoint='index')
