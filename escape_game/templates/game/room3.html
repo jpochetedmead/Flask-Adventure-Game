@@ -1,19 +1,32 @@
 {% extends 'base.html' %}
+
 {% block header %}
   <h1>{% block title %}Third Room{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
   <article class="post" >
-
+      <hr>
       <header>
+        <br>
+        <p><a href="{{ url_for('engine.menu', name='name') }}">Exit Game</a></p>
+        <br>
+        <hr>
+        <br>
         <div>
-          <a class='action' href="/game/menu">Exit game</a>
-          <h1>Room 3</h1>
+          <h1>Third Room</h1>
         </div>
       </header>
 
-      <p>This is Room 3</p>
+      <p>{{ person }} You are in Room 3</p>
 
+      <form method="post">
+        <label for="room3Reply">Answer for question</label><!--TO DO -->
+        <input name="answer" id="room3" required><!--make classes for the test room to
+          return the value and move to the next room so game can play-->
+        <input type="submit" value="Answer">
+      </form>
+      <br>
+      <hr>
     </article>
 {% endblock %}
