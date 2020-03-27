@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block content %}
+  <br>
   <form method="post">
     <label for="name">Name</label>
     <input type="name" name="name" id="name" required>
@@ -13,7 +14,12 @@
     <label for="email">Email</label>
     <input type="email" name="email" id="email" required>
     <label for="password">Password</label>
-    <input type="password" name="password" id="password" required>
+    <input type="password" name="password" id="password" minlength="8" required>
     <input type="submit" value="Register">
   </form>
+  <br>
+  <hr>
+  <br>
+  <a class="center" href="{{ url_for('engine.index') }}">Back to Home Page</a>
+  <br>
 {% endblock %}
